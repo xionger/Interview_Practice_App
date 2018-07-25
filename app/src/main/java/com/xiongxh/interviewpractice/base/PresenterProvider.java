@@ -1,7 +1,11 @@
 package com.xiongxh.interviewpractice.base;
 
+
+import com.xiongxh.interviewpractice.Interviews.InterviewsContract;
+import com.xiongxh.interviewpractice.Interviews.InterviewsPresenter;
+
 public class PresenterProvider {
-    public InteriewsContract.Presenter provideInterviews() {
+    public InterviewsContract.Presenter provideInterviews() {
         return new InterviewsPresenter();
     }
 
