@@ -1,7 +1,6 @@
 package com.xiongxh.interviewpractice.data.local;
 
-import android.arch.persistence.room.Dao;
-
+import com.xiongxh.interviewpractice.InterviewApp;
 import com.xiongxh.interviewpractice.data.InterviewsDataSource;
 import com.xiongxh.interviewpractice.data.bean.Interview;
 import com.xiongxh.interviewpractice.data.bean.Question;
@@ -15,7 +14,7 @@ public class InterviewsLocalDataSource implements InterviewsDataSource {
     InterviewsDao mInterviewsDao;
 
     public InterviewsLocalDataSource(){
-        mInterviewsDao = InterviewApp.get().database.recipesDao();
+        mInterviewsDao = InterviewApp.get().database.interviewsDao();
     }
 
     public InterviewsLocalDataSource(InterviewsDao dao){
@@ -61,6 +60,5 @@ public class InterviewsLocalDataSource implements InterviewsDataSource {
 
             mInterviewsDao.insertQuestions(interview.getQuestions());
         }
-    }
     }
 }
