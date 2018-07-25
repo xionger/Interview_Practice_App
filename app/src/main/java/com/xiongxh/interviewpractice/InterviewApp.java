@@ -6,6 +6,7 @@ import android.arch.persistence.room.Room;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.xiongxh.interviewpractice.api.InterviewApiService;
+import com.xiongxh.interviewpractice.base.PresenterProvider;
 import com.xiongxh.interviewpractice.data.local.InterviewsDatabase;
 import com.xiongxh.interviewpractice.data.local.InterviewsDbContract;
 
@@ -18,7 +19,7 @@ public class InterviewApp extends Application {
 
     public InterviewsDatabase database;
     //public InterviewPreferences interviewPreferences;
-    //public PresenterProvider presenterProvider;
+    public PresenterProvider presenterProvider;
 
     public static InterviewApp get(){ return INSTANCE; }
 
@@ -39,6 +40,6 @@ public class InterviewApp extends Application {
                 .build();
 
         //interviewPreferences = new InterviewPreferences(this);
-        //presenterProvider = new PresenterProvider();
+        presenterProvider = new PresenterProvider();
     }
 }
