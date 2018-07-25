@@ -19,7 +19,7 @@ public interface InterviewsDao {
     void insertInterview(Interview interview);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertquestions(List<Question> questions);
+    void insertQuestions(List<Question> questions);
 
     @Query("SELECT * FROM " + InterviewsDbContract.INTERVIEWS_TABLE_NAME)
     List<Interview> getInterviews();

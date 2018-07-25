@@ -12,6 +12,12 @@ android {
 
         buildConfigField "String", "BASEURL", "\"https://interviewapi-e6e0c.firebaseio.com/\""
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -47,4 +53,6 @@ dependencies {
     implementation "android.arch.persistence.room:rxjava2:1.0.0"
 
     implementation 'org.parceler:parceler-api:1.1.8'
+
+    implementation "com.jakewharton.timber:timber:4.5.1"
 }
