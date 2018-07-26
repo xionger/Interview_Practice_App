@@ -7,6 +7,7 @@ import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.xiongxh.interviewpractice.api.InterviewApiService;
 import com.xiongxh.interviewpractice.base.PresenterProvider;
+import com.xiongxh.interviewpractice.data.InterviewPreferences;
 import com.xiongxh.interviewpractice.data.local.InterviewsDatabase;
 import com.xiongxh.interviewpractice.data.local.InterviewsDbContract;
 
@@ -18,7 +19,7 @@ public class InterviewApp extends Application {
     public OkHttpClient client = new OkHttpClient();
 
     public InterviewsDatabase database;
-    //public InterviewPreferences interviewPreferences;
+    public InterviewPreferences interviewPreferences;
     public PresenterProvider presenterProvider;
 
     public static InterviewApp get(){ return INSTANCE; }
@@ -39,7 +40,7 @@ public class InterviewApp extends Application {
                 InterviewsDbContract.DATABASE_NAME)
                 .build();
 
-        //interviewPreferences = new InterviewPreferences(this);
+        interviewPreferences = new InterviewPreferences(this);
         presenterProvider = new PresenterProvider();
     }
 }
