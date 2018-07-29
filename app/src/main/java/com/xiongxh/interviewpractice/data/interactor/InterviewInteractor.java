@@ -17,7 +17,7 @@ public class InterviewInteractor {
                         new InterviewsRemoteDataSource());
     }
 
-    public Single<Interview> getQuestions(int interviewId){
+    public Single<Interview> getInterviewDetails(int interviewId){
         return mInterviewsRepository.getInterview(interviewId)
                 .compose(RxScheduler.applySchedulersSingle());
     }

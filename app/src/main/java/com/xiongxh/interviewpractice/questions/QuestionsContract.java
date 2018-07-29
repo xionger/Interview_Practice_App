@@ -9,18 +9,17 @@ import java.util.List;
 
 public interface QuestionsContract {
     interface View extends BaseView<Presenter> {
-        void showInterviewQuestions(Interview interview);
-
-        void showSteps(List<Question> questionList);
+        void showInterviewDetails(Interview interview);
+        void showQuestions(List<Question> questionList);
         void showQuestionDetails(int questionId);
         void showInterviewCategory(String interviewCategory);
         void showErrorMessage(String message);
 
-        void refreshQuestionContainer(String desc, String shortDesc, String videoUrl);
+        void refreshQuestionContainer(String desc, String shortDesc, int questionId);
     }
 
     interface Presenter extends BasePresenter<View> {
-        void loadInterviewQuestions();
+        void loadInterviewDetails();
         void openQuestionDetails(int questionId);
         void fetchQuestionData(int questionId);
         void setInterviewId(int interviewId);

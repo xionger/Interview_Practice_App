@@ -28,12 +28,12 @@ public class QuestionsFragment extends Fragment implements QuestionsContract.Vie
     }
 
     @Override
-    public void showInterviewQuestions(Interview interview) {
+    public void showInterviewDetails(Interview interview) {
 
     }
 
     @Override
-    public void showSteps(List<Question> questionList) {
+    public void showQuestions(List<Question> questionList) {
 
     }
 
@@ -53,7 +53,7 @@ public class QuestionsFragment extends Fragment implements QuestionsContract.Vie
     }
 
     @Override
-    public void refreshQuestionContainer(String desc, String shortDesc, String videoUrl) {
+    public void refreshQuestionContainer(String desc, String shortDesc, int questionId) {
 
     }
 
