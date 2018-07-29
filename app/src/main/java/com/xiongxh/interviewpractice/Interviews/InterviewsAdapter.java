@@ -2,6 +2,7 @@ package com.xiongxh.interviewpractice.Interviews;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,8 @@ public class InterviewsAdapter extends RecyclerView.Adapter<InterviewsAdapter.Vi
     }
 
     private void setInterviews(@NonNull List<Interview> interviews){
+        Log.d("interviews size: ", "" + interviews.size());
+
         this.mInterviews = interviews;
     }
 
@@ -74,6 +77,8 @@ public class InterviewsAdapter extends RecyclerView.Adapter<InterviewsAdapter.Vi
         public void bindInterview(final Interview interview) {
             this.mInterview = interview;
             this.mInterviewId = interview.getId();
+            Log.d("interview id:==", mInterviewId + "");
+            Log.d("interview Cat: ==", mInterview.getCategory());
 
             mInterviewCategory.setText(mInterview.getCategory());
         }
