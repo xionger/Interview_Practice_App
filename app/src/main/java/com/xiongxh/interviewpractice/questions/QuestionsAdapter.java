@@ -28,7 +28,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
     interface OnQuestionClickListener {
 
-        void stepClicked(int stepId);
+        void questionClicked(int questionId);
     }
 
     QuestionsAdapter(List<Question> questions, OnQuestionClickListener listener) {
@@ -122,7 +122,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         @Override
         public void onClick(View view) {
             currentPos = mQuestionId;
-            questionClickListener.stepClicked(mQuestionId);
+            questionClickListener.questionClicked(mQuestionId);
             notifyDataSetChanged();
         }
     }
