@@ -12,7 +12,8 @@ public interface QuestionDetailContract {
     }
 
     interface Presenter extends BasePresenter<View> {
-        void loadQuestions();
-        void setInterviewId(int InterviewId);
+        void loadQuestionDetail();
+        void setInterviewId(int interviewId);
+        void setQuestionId(int questionId);
     }
 }
